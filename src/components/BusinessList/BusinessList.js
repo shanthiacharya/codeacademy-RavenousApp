@@ -10,7 +10,7 @@ class BusinessList extends Component {
         return (
          <div className="BusinessList">
           { this.props.businesses.map(business  => {
-            return <Business business = {business}/>
+            return <Business key = {business.name} business = {business}/>
           })
           }
         </div>
