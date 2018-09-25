@@ -10,18 +10,19 @@ class SearchBar extends Component {
     constructor(props) {
         super (props);
 
-        // this.handleLocationChange = this.handleLocationChange.bind(this);
-        // this.handleTermChange = this.handleTermChange.bind(this);
-        // this.handleSortByChange = this.handleSortByChange(this);
+        
         this.state = { 
             term: '',
             location: '',
-            sortBy:'best-match'
+            sortBy:'best_match'
             
         }
+        this.handleLocationChange = this.handleLocationChange.bind(this);
+        this.handleTermChange = this.handleTermChange.bind(this);
+        this.handleSortByChange = this.handleSortByChange.bind(this);
         
         this.sortByOptions = {
-           'Best Match': 'best-match',
+           'Best Match': 'best_match',
            'Highest Rated':'rating',
            'Most Reviewed':'review_count'
         };
